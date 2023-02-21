@@ -1,0 +1,2 @@
+# Ignore grib data files
+*.grib
