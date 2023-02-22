@@ -6,3 +6,5 @@
 
 # Ignore CSV files
 *.csv
+
+*.idx
