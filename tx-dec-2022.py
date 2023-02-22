@@ -47,3 +47,5 @@ conn.retrieve(
 """
 
 ds=xr.open_dataset('download.grib',engine='cfgrib')
+
+ds

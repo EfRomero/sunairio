@@ -1,2 +1,8 @@
 # Ignore grib data files
 *.grib
+
+# Ignore notebook checkpoint files
+.ipynb_checkpoints/*.ipynb
+
+# Ignore CSV files
+*.csv
