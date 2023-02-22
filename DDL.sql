@@ -1,12 +1,17 @@
 -- Use precise numeric data type to avoid non-deterministic shenanigans
 -- related to floating points
+
+-- Suggestion: Make datetime part of the clustering index for this table.
+-- Physically sorting the table based on the time series that data will loaded by
+-- will mitigate disk fragmentation and will support querying the data based on date
+-- intervals. Didn't do that yet because:
+-- "Premature optimization is the root of all evil." -Donald Knuth
 create table if not exists texas_t2m (
 	datetime Timestamp,
 	latitude numeric(20, 15),
 	longitude numeric(20, 15),
 	t2m numeric(20, 15)
 );
-
 
 -- Return unbounded time series of Texas t2m data based on lat lon of nearest
 -- coordinates provided as arguments
